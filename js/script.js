@@ -68,10 +68,11 @@ project 1 - A Random Quote Generator
   ]
 
 
-
-/***
- * `getRandomQuote` function
-***/
+// Create a variable that generates a random number between zero and the last index in the quotes array 
+function getRandomQuote (array) {
+  var quote = Math.floor((Math.random() * quotes.length ) + 1 )
+  return quote;
+  } 
 
 
 
