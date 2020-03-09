@@ -17,25 +17,13 @@ var quotes = [
     { quote: "I go to nature every day for inspiration in the day's work.", source: 'Frank Lloyd Wright', citation: '', year: '' }
 ]
 
-// Log the contents of the quotes variable to the console
-console.log(quotes); 
-
 function getRandomQuote (array) {
   var number = Math.floor((Math.random() * quotes.length ) + 1 ); // Create a variable that generates a random number between zero and the last index in the quotes array 
   var output = quotes[number]["quote"]; // Utilizing the number in the previous step as an index, access a quote from the object and assign it to the 'output' variable
-   return output;
+  return output;
   } 
 
-  /***
- * `printQuote` function
-***/
+function printQuote (){}
 
-
-
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
-console.log('Test');
-console.log(quotes);
+// Click Event Listener
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
