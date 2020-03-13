@@ -16,20 +16,18 @@ var quotes = [
     { quote: "Because in the end, you won't remember the time you spent working in the office or mowing your lawn. Climb that goddamn mountain.", source: 'Jack Kerouac', citation: '', year: '' },
     { quote: "I go to nature every day for inspiration in the day's work.", source: 'Frank Lloyd Wright', citation: '', year: '' }
 ]
-
-function getRandomQuote (array) {
-  var number = Math.floor((Math.random() * array.length ) + 1 ); // Create a variable that generates a random number between zero and the last index in the quotes array 
+// Utilizing math functions to select an index and use that index to access an object literal
+function getRandomQuote ( array ) {
+  var number = Math.floor( (Math.random() * array.length ) + 1 ); // Create a variable that generates a random number between zero and the last index in the quotes array 
   var output = array[number]; // Utilizing the number in the previous step as an index, access a quote from the object and assign it to the 'output' variable
   return output;
   } 
 
 function printQuote (){
-  var responseQuote = getRandomQuote(quotes);
-  var outputQuote = document.getElementById('quote-slot');
-  var outputSource = document.getElementById('source-slot');
-  outputQuote.innerHTML = responseQuote.quote ;
-  outputSource.innerHTML = responseQuote.source;
-  
+  var responseQuote = getRandomQuote(quotes); // Get a random quote object with properties
+  var outputHTML = '<p class="quote">' + responseQuote.quote + '</p>';
+  outputHTML += '<p class="source">' + responseQuote.source;
+   
 }
 
   
