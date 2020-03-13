@@ -37,12 +37,14 @@ function printQuote() {
     outputHTML += '<span class ="year">' + responseQuote.year + '</span>';
   }
   if (responseQuote.tags) {
-    var outputTags = '<p>Theme' + responseQuote.tags.toUpperCase() + '</p>';
+    var outputTags = '<p>Theme: ' + responseQuote.tags.toUpperCase() + '</p>';
   }
   outputHTML += '</p>';
   document.getElementById('tags').innerHTML = outputTags;
   document.getElementById('quote-box').innerHTML = outputHTML;
 }
+
+
 
 // Activation of the printQuote function everytime the user clicks the on-page button
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
