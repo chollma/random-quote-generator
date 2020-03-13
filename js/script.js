@@ -36,7 +36,11 @@ function printQuote() {
   if (responseQuote.year) {
     outputHTML += '<span class ="year">' + responseQuote.year + '</span>';
   }
+  if (responseQuote.tags) {
+    var outputTags = '<p>Theme' + responseQuote.tags.toUpperCase() + '</p>';
+  }
   outputHTML += '</p>';
+  document.getElementById('tags').innerHTML = outputTags;
   document.getElementById('quote-box').innerHTML = outputHTML;
 }
 
