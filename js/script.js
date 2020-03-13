@@ -24,12 +24,11 @@ function getRandomQuote (array) {
   } 
 
 function printQuote (){
-  var responseQuote = getRandomQuote(quotes).quote;
-  var responseSource = getRandomQuote(quotes).source;
+  var responseQuote = getRandomQuote(quotes);
   var outputQuote = document.getElementById('quote-slot');
   var outputSource = document.getElementById('source-slot');
-  outputQuote.innerHTML = responseQuote ;
-  outputSource.innerHTML = responseSource;
+  outputQuote.innerHTML = responseQuote.quote ;
+  outputSource.innerHTML = responseQuote.source;
   
 }
 
