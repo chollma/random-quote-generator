@@ -8,7 +8,7 @@ var quotes = [
     { quote: "The Antidote to exhaustion isn't rest. It's nature.", source: 'Shikoba', citation: '', year: '' },
     { quote: "Earth and sky, woods and fields, lakes and rivers, the mountain and the sea, are excellent schoolmasters, and teach of us more than we can ever learn from books.", source: 'John Lubbock', citation: '', year: '' },
     { quote: "He is richest who is content with the least, for content is the wealth of nature.", source: 'Socrates', citation: '', year: '' },
-    { quote: "I took a walk in the woods and came out taller than the trees.', source: 'Henry David Thoreau", citation: '', year: '' },
+    { quote: "I took a walk in the woods and came out taller than the trees.", source: 'Henry David Thoreau', citation: '', year: '' },
     { quote: "The human spirit needs places where nature has not been rearranged by the hand of man.", source: 'Proverb', citation: '', year: '' },
     { quote: "All good things are wild and free.", source: 'Proverb', citation: '', year: '' },
     { quote: "In every walk with nature one receives far more than he seeks.", source: 'John Muir', citation: '', year: '' },
@@ -19,14 +19,20 @@ var quotes = [
 
 function getRandomQuote (array) {
   var number = Math.floor((Math.random() * quotes.length ) + 1 ); // Create a variable that generates a random number between zero and the last index in the quotes array 
-  var outputQuote = quotes[number]["quote"]; // Utilizing the number in the previous step as an index, access a quote from the object and assign it to the 'output' variable
-  return outputQuote;
+  var output = quotes[number]; // Utilizing the number in the previous step as an index, access a quote from the object and assign it to the 'output' variable
+  return output;
   } 
 
-function printQuote (outputQuote,outputSource){}
-  var response = getRandomQuote(quotes);
-  var HTML = '<p class="quote">' + response + '</p>';
-  HTML += '<p class ="source"' + response + '</p>';
-  document.write(HTML);
+function printQuote (){
+  var responseQuote = getRandomQuote(quotes).quote;
+  var responseSource = getRandomQuote(quotes).source;
+  var outputQuote = document.getElementById('quote-slot');
+  var outputSource = document.getElementById('source-slot');
+  outputQuote.innerHTML = responseQuote ;
+  outputSource.innerHTML = responseSource;
+  
+}
+
+  
 // Click Event Listener
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
