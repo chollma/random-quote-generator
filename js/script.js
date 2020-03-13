@@ -18,8 +18,8 @@ var quotes = [
 ]
 
 function getRandomQuote (array) {
-  var number = Math.floor((Math.random() * quotes.length ) + 1 ); // Create a variable that generates a random number between zero and the last index in the quotes array 
-  var output = quotes[number]; // Utilizing the number in the previous step as an index, access a quote from the object and assign it to the 'output' variable
+  var number = Math.floor((Math.random() * array.length ) + 1 ); // Create a variable that generates a random number between zero and the last index in the quotes array 
+  var output = array[number]; // Utilizing the number in the previous step as an index, access a quote from the object and assign it to the 'output' variable
   return output;
   } 
 
