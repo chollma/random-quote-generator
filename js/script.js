@@ -1,3 +1,5 @@
+import { read } from "fs";
+
 /******************************************
 Student: Cooper Hollmaier
 Project: Techdegree - Unit 1
@@ -17,11 +19,29 @@ var quotes = [
   { quote: "Because in the end, you won't remember the time you spent working in the office or mowing your lawn. Climb that goddamn mountain.", source: 'Jack Kerouac', citation: '', year: '', tags: 'outdoors' },
   { quote: "I go to nature every day for inspiration in the day's work.", source: 'Frank Lloyd Wright', citation: '', year: '', tags: 'outdoors' }
 ]
+
+// Pre-selected list that contains the colors of the rainbow as strings of text
+var colors = [
+  { color: 'red'},
+  { color: 'orange'},
+  { color: 'yellow'},
+  { color: 'green'},
+  { color: 'indigo'},
+  { color: 'blue'},
+  { color: 'purple'}
+]
+
 // Generation of a random number to serve as the index for accessing the object above. Output should be a singular item object in the array.
 function getRandomQuote(array) {
   var number = Math.floor((Math.random() * array.length) + 1);
   var output = array[number];
   return output;
+}
+
+function getRandomColor(array) {
+  var numberTwo = Math.floor((Math.random() * array.length) + 1);
+  var outputColor = array[numberTwo];
+  return outputColor;
 }
 
 // Assembly of HTML output string utilizing the information returned from getRandomQuote
