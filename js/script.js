@@ -1,4 +1,3 @@
-import { read } from "fs";
 
 /******************************************
 Student: Cooper Hollmaier
@@ -42,11 +41,13 @@ function getRandomColor(array) {
   var numberTwo = Math.floor((Math.random() * array.length) + 1);
   var outputColor = array[numberTwo];
   return outputColor;
+  
 }
 
 // Assembly of HTML output string utilizing the information returned from getRandomQuote
 function printQuote() {
   var responseQuote = getRandomQuote(quotes); // Get a random quote object with properties
+  var responseColor = getRandomColor(colors).color; // Get random color object with properties
   var outputHTML = '<p class="quote">' + responseQuote.quote + '</p>';
   outputHTML += '<p class="source">' + responseQuote.source;
 
@@ -62,6 +63,7 @@ function printQuote() {
   outputHTML += '</p>';
   document.getElementById('tags').innerHTML = outputTags;
   document.getElementById('quote-box').innerHTML = outputHTML;
+  document.body.style.backgroundColor = responseColor;
 }
 
 
