@@ -3,6 +3,7 @@
 Student: Cooper Hollmaier
 Project: Techdegree - Unit 1
 Intended Behavior: A Random Quote Generator
+Goal: Exceeds Expecatations
 ******************************************/
 
 // Pre-selected a list of 10 outdoor themed quotes. 2 of them contain values for citation and year. 
