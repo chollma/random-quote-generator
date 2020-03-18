@@ -32,13 +32,13 @@ var colors = [
 
 // Generation of a random number to serve as the index for accessing the object above. Output should be a singular item object in the array.
 function getRandomQuote(array) {
-  var number = Math.floor((Math.random() * array.length) + 1);
+  var number = Math.floor(( Math.random() * array.length ));
   var output = array[number];
   return output;
 }
 
 function getRandomColor(array) {
-  var numberTwo = Math.floor((Math.random() * array.length) + 1);
+  var numberTwo = Math.floor(( Math.random() * array.length ));
   var outputColor = array[numberTwo];
   return outputColor;
 
